@@ -1,0 +1,35 @@
+TravelFlow - Expense & Budget Module
+
+Use a fresh JWT in Postman: Authorization -> Bearer Token.
+
+1) Create expense
+POST http://localhost:8080/api/trips/3/expenses
+Body (JSON):
+{
+  "category": "Hotel",
+  "description": "Hotel booking in Goa",
+  "amount": 8000,
+  "expenseDate": "2026-12-10"
+}
+
+2) Get expenses
+GET http://localhost:8080/api/trips/3/expenses
+
+3) Update expense (replace 1 with actual expense ID)
+PUT http://localhost:8080/api/trips/3/expenses/1
+Body (JSON):
+{
+  "category": "Hotel",
+  "description": "Updated hotel booking",
+  "amount": 8500,
+  "expenseDate": "2026-12-10"
+}
+
+4) Budget summary
+GET http://localhost:8080/api/trips/3/budget-summary
+Expected fields: tripId, budget, totalSpent, remainingBudget
+
+5) Delete expense (replace 1 with actual expense ID)
+DELETE http://localhost:8080/api/trips/3/expenses/1
+
+Note: Expense dates are validated to be within the trip start/end dates.

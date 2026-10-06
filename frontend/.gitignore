@@ -1,0 +1,94 @@
+# ==============================
+# TravelFlow .gitignore
+# ==============================
+
+# ------------------------------
+# Java / Spring Boot / Maven
+# ------------------------------
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven temporary files
+.mvn/timing.properties
+
+# ------------------------------
+# Node / React / Vite
+# ------------------------------
+node_modules/
+frontend/node_modules/
+
+dist/
+frontend/dist/
+dist-ssr/
+
+.vite/
+frontend/.vite/
+
+# ------------------------------
+# Logs
+# ------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------
+# Environment Variables / Secrets
+# ------------------------------
+.env
+.env.*
+!.env.example
+
+frontend/.env
+frontend/.env.*
+
+*.local
+
+# ------------------------------
+# VS Code
+# ------------------------------
+.vscode/*
+!.vscode/extensions.json
+
+# ------------------------------
+# IntelliJ IDEA
+# ------------------------------
+.idea/
+*.iml
+
+# ------------------------------
+# Eclipse / Spring Tool Suite
+# ------------------------------
+.project
+.classpath
+.settings/
+.springBeans
+.sts4-cache/
+
+# ------------------------------
+# Operating System Files
+# ------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------
+# Visual Studio
+# ------------------------------
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ------------------------------
+# Temporary Files
+# ------------------------------
+*.sw?
+*.tmp
+*.temp

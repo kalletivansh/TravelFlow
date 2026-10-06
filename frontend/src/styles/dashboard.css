@@ -1,0 +1,278 @@
+.dashboard-page {
+  min-height: calc(100vh - 72px);
+  padding: 42px 6%;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  margin: 4px 0 8px;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.dashboard-label {
+  margin: 0;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.dashboard-subtitle {
+  max-width: 620px;
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.create-trip-link {
+  flex-shrink: 0;
+  padding: 12px 20px;
+  border-radius: 9px;
+  background: #172033;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.create-trip-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px
+    rgba(15, 23, 42, 0.15);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.dashboard-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-height: 145px;
+  padding: 22px;
+  background: white;
+  border: 1px solid #e8edf5;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px
+    rgba(15, 23, 42, 0.04);
+}
+
+.dashboard-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #eef4ff;
+  color: #2563eb;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.dashboard-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dashboard-card strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #172033;
+  font-size: 25px;
+}
+
+.dashboard-card small {
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+}
+
+.budget-overview,
+.quick-actions {
+  padding: 28px;
+  background: white;
+  border: 1px solid #e8edf5;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px
+    rgba(15, 23, 42, 0.04);
+}
+
+.budget-overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.budget-overview h2,
+.quick-actions h2 {
+  margin: 5px 0 15px;
+}
+
+.remaining-budget {
+  text-align: right;
+}
+
+.remaining-budget span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.remaining-budget strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.budget-values {
+  display: flex;
+  gap: 50px;
+  margin: 25px 0 18px;
+}
+
+.budget-values span {
+  display: block;
+  margin-bottom: 4px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.budget-values strong {
+  font-size: 18px;
+}
+
+.budget-progress {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  background: #e8edf5;
+  border-radius: 20px;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.budget-progress-text {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.quick-actions p:not(.dashboard-label) {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.quick-action-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 11px 17px;
+  border-radius: 8px;
+  background: #eef4ff;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.dashboard-message {
+  max-width: 550px;
+  margin: 100px auto;
+  padding: 35px;
+  text-align: center;
+  background: white;
+  border-radius: 14px;
+}
+
+.error-message {
+  color: #b91c1c;
+}
+
+.loading-spinner {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto 20px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: dashboard-spin 0.8s linear infinite;
+}
+
+@keyframes dashboard-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1050px) {
+  .dashboard-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboard-page {
+    padding: 25px 18px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+    font-size: 29px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-overview-header {
+    flex-direction: column;
+  }
+
+  .remaining-budget {
+    text-align: left;
+  }
+
+  .budget-values {
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+}
